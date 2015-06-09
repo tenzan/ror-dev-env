@@ -4,7 +4,14 @@ Creating Ruby on Rails virtual environment based on Ubuntu 14.04 64-bit/Vagrant/
 # Steps
 
 1. Install `git`, if you don't have one yet.
-Windows users can use install git for Windows from https://msysgit.github.io/
+
+## Instructions for WindowsOS
+ - Windows users can use install git for Windows from https://windows.github.com/
+ - When you start installing prerequisites for github for windows and will ask you for reboot
+ - After reboot it will start installing `github for windows`
+ - Once installation completes, it will pop up the windows to login with you github credentials. Enter them.
+ - On your Desktop you will find `Git Shell` shortcut, click on it. (Always use `Git Shell` instead of `Command Prompt`)
+ - Move to the directory where you want to clone `https://github.com/tenzan/ror-dev-env`
 
 2. Clone repo
 `git clone https://github.com/tenzan/ror-dev-env.git` and `cd` to the repo.
@@ -24,7 +31,7 @@ Download and install from `http://download.virtualbox.org/virtualbox/4.3.28/Virt
 
 - `brew cask install virtualbox`
 
-## Ubuntu. Ref.: https://www.virtualbox.org/wiki/Linux_Downloads
+## Ubuntu. Ref.: `https://www.virtualbox.org/wiki/Linux_Downloads`vagrant
 
 - Add the following line to your /etc/apt/sources.list:
   `deb http://download.virtualbox.org/virtualbox/debian trusty contrib`
@@ -37,10 +44,7 @@ Download and install from `http://download.virtualbox.org/virtualbox/4.3.28/Virt
 - You may need to run `sudo apt-get install dkms`
 
 
-4. Download and mount `VBoxGuestAdditions` ISO image to your `VirtualBox`
-`http://dlc-cdn.sun.com/virtualbox/4.3.28/VBoxGuestAdditions_4.3.28.iso`
-
-5. Install Vagrant. To learn more: https://www.vagrantup.com/
+4. Install Vagrant. To learn more: https://www.vagrantup.com/
 
 ## Windows
 
@@ -56,12 +60,15 @@ Download and install from `https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.
 
 *Note*: The following steps are common for any OS
 
-4. Add the vagrant box `ubuntu-14.04-x64`
+5. Add the vagrant box `ubuntu-14.04-x64`
 
 `vagrant box add ubuntu-14.04-x64 https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box`
 
-5. Starting vagrant. Username and password for the VM: `vagrant`
+6. Starting vagrant. Username and password for the VM: `vagrant`
 `vagrant up`
+
+*Note:* At some point you will need to download and mount `VBoxGuestAdditions` ISO image to your `VirtualBox`
+`http://dlc-cdn.sun.com/virtualbox/4.3.28/VBoxGuestAdditions_4.3.28.iso`
 
 # Test if it's working
 
@@ -74,7 +81,7 @@ bundle install &&
 rails s -b 0.0.0.0
 ```
 
-6. To check if `myapp` is running, on your host machine's browser, access `http://10.20.30.100:3000`
+7. To check if `myapp` is running, on your host machine's browser, access `http://10.20.30.100:3000`
 
 *Recommended for reading:* http://stackoverflow.com/a/30723007/1745902
 
