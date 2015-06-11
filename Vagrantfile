@@ -25,19 +25,6 @@ Vagrant.configure(2) do |config|
     ubuntu.vm.provision "shell", path: "provision.sh", privileged: false
     ubuntu.vm.network "private_network", ip: "10.20.30.100"
     ubuntu.vm.hostname = "ubuntu"
-
-    # VirtualBox Specific Stuff
-    # https://www.virtualbox.org/manual/ch08.html
-    config.vm.provider "virtualbox" do |vb|
-
-      # Set more RAM
-      vb.customize ["modifyvm", :id, "--memory", "2048"]
-
-      # More CPU Cores
-      vb.customize ["modifyvm", :id, "--cpus", "2"]
-
-    end # End config.vm.provider virtualbox
-
   end # End config.vm.define ubuntu
 
 end
